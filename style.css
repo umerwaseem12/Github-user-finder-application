@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: url("https://repository-images.githubusercontent.com/468905916/90ca25d9-022e-4a73-97df-fcf49082363a") no-repeat center center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #fff;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.app {
+  position: relative;
+  z-index: 2;
+  width: 380px;
+  padding: 25px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+.app h1 {
+  margin-bottom: 18px;
+  font-size: 24px;
+}
+
+.app input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.15);
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 15px;
+  animation: fadeIn 0.3s ease;
+}
+
+.card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid #00c6ff;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.card p {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 8px;
+  text-decoration: none;
+  color: #00c6ff;
+  font-weight: bold;
+}
+
+.error {
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#searchBtn {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #fff;
+
+  box-shadow: 0 8px 20px rgba(0, 198, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+#searchBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 198, 255, 0.6);
+  background: linear-gradient(135deg, #1ad7ff, #005eff);
+}
+#searchBtn:active {
+  transform: scale(0.97);
+}
+#searchBtn:focus {
+  outline: none;
+}
